@@ -6,6 +6,6 @@ Nvflare on mnist library
 run start in: 
   -testnvflare/workspace/mnist_project/prod_00/IP/startup/start.sh for serveur
   -testnvflare/workspace/mnist_project/prod_00/site-1/startup/start.sh for serveur
-  -testnvflare/workspace/mnist_project/prod_00/IP/startup/start.sh for serveur
+  -testnvflare/workspace/mnist_project/prod_00/site-2/startup/start.sh for serveur
 -nvflare config -d testnvflare/workspace/mnist_project/prod_00/admin@nvidia.com/
 -nvflare job submit -j testnvflare
