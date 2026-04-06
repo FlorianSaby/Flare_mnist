@@ -1,0 +1,10 @@
+{
+  "name": "testnvflare",
+  "resource_spec": {},
+  "deploy_map": {
+    "app": ["@ALL"]
+  },
+
+  "min_clients": 2,
+  "num_rounds": 10
+}
