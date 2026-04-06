@@ -20,9 +20,9 @@ You’ll need to run the startup scripts on each respective machine (Server, Sit
 
 | Component | Execution Path |
 | :--- | :--- |
-| **Server** | `workspace/mnist_project/prod_00/IP/startup/start.sh` |
-| **Site-1** | `workspace/mnist_project/prod_00/site-1/startup/start.sh` |
-| **Site-2** | `workspace/mnist_project/prod_00/site-2/startup/start.sh` |
+| **Server** | `./workspace/mnist_project/prod_00/IP/startup/start.sh` |
+| **Site-1** | `./workspace/mnist_project/prod_00/site-1/startup/start.sh` |
+| **Site-2** | `./workspace/mnist_project/prod_00/site-2/startup/start.sh` |
 
 ---
 
@@ -41,7 +41,7 @@ Now that the server is up and the sites are connected, it's time to submit your 
 
 ```bash
 # Submit the MNIST job to the server
-nvflare job submit -j flare_mnist
+nvflare job submit -j ../flare_mnist
 ```
 
 ---
