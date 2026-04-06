@@ -10,7 +10,7 @@ First, we generate the startup kits based on your configuration file.
 # Provision the project workspace
 nvflare provision -p flare_mnist/project.yml
 ```
-> **Networking Note:** Ensure your `project.yml` includes the correct static IP addresses so that all sites can successfully locate and connect to the server.
+> **Networking Note:** Ensure your `project.yml` includes the correct static IP address of the server.
 > If you don’t have one, you can use a service like Tailscale to handle it for you.
 
 ---
