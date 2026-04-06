@@ -1,6 +1,5 @@
 # Flare_mnist
 # NVFlare Deployment Guide: MNIST
-This guide assumes you are using **Tailscale** to provide stable, fixed IP addresses for your participants.
 
 ---
 
@@ -9,9 +8,10 @@ First, we generate the startup kits based on your configuration file.
 
 ```bash
 # Provision the project workspace
-nvflare provision -p project.yml
+nvflare provision -p flare_mnist/project.yml
 ```
-> **Networking Note:** Ensure your `flare_mnist/project.yml` reflects the static IPs provided by Tailscale so the sites can actually find the server!
+> **Networking Note:** Ensure your `project.yml` includes the correct static IP addresses so that all sites can successfully locate and connect to the server.
+> If you don’t have one, you can use a service like Tailscale to handle it for you.
 
 ---
 
