@@ -8,7 +8,7 @@ First, we generate the startup kits based on your configuration file.
 
 ```bash
 # Provision the project workspace
-nvflare provision -p flare_mnist/project.yml
+nvflare provision -p project.yml
 ```
 > **Networking Note:** Ensure your `project.yml` includes the correct static IP address of the server.
 > If you don’t have one, you can use a service like Tailscale to handle it for you.
@@ -20,9 +20,9 @@ You’ll need to run the startup scripts on each respective machine (Server, Sit
 
 | Component | Execution Path |
 | :--- | :--- |
-| **Server** | `flare_mnist/workspace/mnist_project/prod_00/IP/startup/start.sh` |
-| **Site-1** | `flare_mnist/workspace/mnist_project/prod_00/site-1/startup/start.sh` |
-| **Site-2** | `flare_mnist/workspace/mnist_project/prod_00/site-2/startup/start.sh` |
+| **Server** | `workspace/mnist_project/prod_00/IP/startup/start.sh` |
+| **Site-1** | `workspace/mnist_project/prod_00/site-1/startup/start.sh` |
+| **Site-2** | `workspace/mnist_project/prod_00/site-2/startup/start.sh` |
 
 ---
 
@@ -31,7 +31,7 @@ Before you can bark orders at the sites, you need to point your admin tool to th
 
 ```bash
 # Set the directory for the admin console
-nvflare config -d flare_mnist/workspace/mnist_project/prod_00/admin@nvidia.com/
+nvflare config -d workspace/mnist_project/prod_00/admin@nvidia.com/
 ```
 
 ---
