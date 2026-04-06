@@ -11,7 +11,7 @@ First, we generate the startup kits based on your configuration file.
 # Provision the project workspace
 nvflare provision -p project.yml
 ```
-> **Networking Note:** Ensure your `project.yml` reflects the static IPs provided by Tailscale so the sites can actually find the server!
+> **Networking Note:** Ensure your `flare_mnist/project.yml` reflects the static IPs provided by Tailscale so the sites can actually find the server!
 
 ---
 
@@ -20,9 +20,9 @@ You’ll need to run the startup scripts on each respective machine (Server, Sit
 
 | Component | Execution Path |
 | :--- | :--- |
-| **Server** | `testnvflare/workspace/mnist_project/prod_00/IP/startup/start.sh` |
-| **Site-1** | `testnvflare/workspace/mnist_project/prod_00/site-1/startup/start.sh` |
-| **Site-2** | `testnvflare/workspace/mnist_project/prod_00/site-2/startup/start.sh` |
+| **Server** | `flare_mnist/workspace/mnist_project/prod_00/IP/startup/start.sh` |
+| **Site-1** | `flare_mnist/workspace/mnist_project/prod_00/site-1/startup/start.sh` |
+| **Site-2** | `flare_mnist/workspace/mnist_project/prod_00/site-2/startup/start.sh` |
 
 ---
 
@@ -31,7 +31,7 @@ Before you can bark orders at the sites, you need to point your admin tool to th
 
 ```bash
 # Set the directory for the admin console
-nvflare config -d testnvflare/workspace/mnist_project/prod_00/admin@nvidia.com/
+nvflare config -d flare_mnist/workspace/mnist_project/prod_00/admin@nvidia.com/
 ```
 
 ---
@@ -41,12 +41,8 @@ Now that the server is up and the sites are connected, it's time to submit your 
 
 ```bash
 # Submit the MNIST job to the server
-nvflare job submit -j testnvflare
+nvflare job submit -j flare_mnist
 ```
 
 ---
 
-## 📋 Quick Checklist
-* [ ] **Tailscale:** Are all nodes connected and pingable via their Tailscale IPs?
-* [ ] **Permissions:** Did you remember to `chmod +x` the `.sh` files if they aren't executing?
-* [ ] **Firewall:** Is port `8002` (default) open for the admin console and `8003` for the sites to talk to the server?
