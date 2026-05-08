@@ -1,4 +1,3 @@
-# Flare_mnist
 # NVFlare Deployment Guide: MNIST
 
 ---
